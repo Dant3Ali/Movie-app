@@ -1,6 +1,5 @@
 package com.movie.proj.controller;
 
-import com.movie.proj.api.MovieApiMethods;
 import com.movie.proj.entities.Movie;
 import com.movie.proj.exceptions.MovieNotFoundException;
 import com.movie.proj.exceptions.MovieNotFoundHandler;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequiredArgsConstructor

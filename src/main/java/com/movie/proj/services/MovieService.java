@@ -1,7 +1,6 @@
 package com.movie.proj.services;
 
 import com.movie.proj.api.MovieApiMethods;
-import com.movie.proj.dao.MovieDao;
 import com.movie.proj.dao.MovieDaoImpl;
 import com.movie.proj.entities.Movie;
 import lombok.RequiredArgsConstructor;

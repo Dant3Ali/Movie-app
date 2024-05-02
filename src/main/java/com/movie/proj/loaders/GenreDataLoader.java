@@ -1,6 +1,5 @@
 package com.movie.proj.loaders;
 
-import com.movie.proj.api.GenreApiMethods;
 import com.movie.proj.services.GenreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
