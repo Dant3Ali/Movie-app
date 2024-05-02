@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface MovieDao {
+
     public void add(Movie movie);
     public void addAll(List<Movie> movies);
     public String serializeMovie(Movie movie);
