@@ -1,4 +1,4 @@
-package com.movie.proj.models;
+package com.movie.proj.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

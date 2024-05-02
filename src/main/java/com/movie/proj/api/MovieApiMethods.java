@@ -1,6 +1,7 @@
 package com.movie.proj.api;
 
 import com.movie.proj.entities.Movie;
+import lombok.extern.slf4j.Slf4j;
 import org.asynchttpclient.AsyncHttpClient;
 import org.asynchttpclient.DefaultAsyncHttpClient;
 import org.json.JSONArray;
@@ -15,17 +16,18 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 @Component
+@Slf4j
 public class MovieApiMethods {
 
     private static final String API_URL = "https://ott-details.p.rapidapi.com/advancedsearch";
-    private static final String API_KEY = "6b84a38777mshda618d1086b4327p15bd48jsn0a5eca414e7d";
+    private static final String API_KEY = "f91f5a0a04msh416e8d9e211ab55p15a7e0jsneb415a2840c9";
     private static final String API_HOST = "ott-details.p.rapidapi.com";
 
     public static CompletableFuture<List<Movie>> fetchMoviesAsync(String page) {
-//        AsyncHttpClient client = new DefaultAsyncHttpClient();
-//
+        AsyncHttpClient client = new DefaultAsyncHttpClient();
+
         CompletableFuture<List<Movie>> future = new CompletableFuture<>();
-//
+
 //        CompletableFuture.delayedExecutor(3, TimeUnit.SECONDS).execute(() -> {
 //            client.prepare("GET", API_URL)
 //                    .addQueryParam("start_year", "1970")
@@ -43,6 +45,7 @@ public class MovieApiMethods {
 //                    .thenApply(response -> {
 //                        List<Movie> movies = new ArrayList<>();
 //                        try {
+//                            log.info("Starting json decomposition");
 //                            JSONObject jsonResponse = new JSONObject(response.getResponseBody());
 //                            JSONArray resultsArray = jsonResponse.getJSONArray("results");
 //                            for (int i = 0; i < resultsArray.length(); i++) {

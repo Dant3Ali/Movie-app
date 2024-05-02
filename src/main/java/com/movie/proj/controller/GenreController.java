@@ -1,7 +1,8 @@
 package com.movie.proj.controller;
 
 import com.movie.proj.api.GenreApiMethods;
-import com.movie.proj.models.Genre;
+import com.movie.proj.entities.Genre;
+import com.movie.proj.services.GenreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +16,10 @@ import java.util.concurrent.ExecutionException;
 @RequiredArgsConstructor
 public class GenreController {
 
-    private final GenreApiMethods genreApiMethods;
+    private final GenreService genreService;
 
-//    @GetMapping
-//    public List<Genre> getGenres() throws ExecutionException, InterruptedException {
-//        return genreApiMethods.fetchGenresAsync().get();
-//    }
+    @GetMapping
+    public List<Genre> getGenres(){
+        return genreService.getAllGenres();
+    }
 }
